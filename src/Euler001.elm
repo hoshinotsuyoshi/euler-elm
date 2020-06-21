@@ -1,8 +1,12 @@
+-- https://projecteuler.net/problem=1
+
 module Euler001 exposing(main)
 
 import Html
 
-main = threeOrFiveModulo 42
+main = List.range 1 (1000-1)
+  |> List.map threeOrFiveModulo
+  |> List.sum
   |> String.fromInt
   |> Html.text
 
